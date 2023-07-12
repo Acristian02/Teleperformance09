@@ -1,0 +1,27 @@
+Creación de tabla departamentos
+
+CREATE TABLE departamentos (
+  id_departamento INT PRIMARY KEY,
+  nombre_departamento VARCHAR(50)
+);
+
+Creación de tabla tp_empleados_2023
+
+CREATE TABLE empleados (
+  id_empleado int (11) AUTO_INCREMENT,
+  nombre VARCHAR(30) NOT NULL,
+  documento VARCHAR(50) NULL,
+  correo VARCHAR(50) NOT NULL,
+  ciudad_residencia VARCHAR(50) NULL,
+  id_departamento INT,
+  PRIMARY KEY (id_empleado)	
+  FOREIGN KEY (id_departamento) REFERENCES departamentos(id_departamento)
+);
+
+
+insersion de datos en departamentos 
+
+INSERT INTO departamentos (id_departamento, departamento) VALUES
+(1, 'Boyaca'),
+(2, 'Cundinamarca'),
+(3, 'Santander');
